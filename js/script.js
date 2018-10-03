@@ -6,7 +6,8 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 // Load Stores Here
 
-import APILoad from './app.js';
+import TodistAPILoad from './stores/Todoist.js';
+import TogglAPILoad from './stores/Toggl.js';
 
 
 // Load Components Here
@@ -24,7 +25,8 @@ class AppBody extends React.Component{
     return (
       <div>
         <Navbar />
-        <APILoad />
+        <TodistAPILoad />
+        <TogglAPILoad />
       </div>
     );
   }

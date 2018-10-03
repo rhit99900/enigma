@@ -1,14 +1,12 @@
 import React from 'react';
-import Layout from './components/Layout.js';
+import Layout from '../components/Layout.js';
 
 
-const toggleUrl = 'https://www.toggl.com/api/v8/me';
-const toggleAPIToken = '29a0fa026e0a8769c28e4e445e03514f';
-// const todoistUrl = endpoint => `https://beta.todoist.com/API/v8/${endpoint}`;
+
 const todoistUrl = 'https://beta.todoist.com/API/v8/projects';
 const todoistAPIToken = 'f52f8727b5216dfe43cf7560d2df4d0ce1285d4e';
 
-class APILoad extends React.Component{
+class TodoistAPILoad extends React.Component{
 
   constructor(props){
     super(props);
@@ -43,7 +41,11 @@ class APILoad extends React.Component{
     var { isLoaded, items } = this.state;
     if(!isLoaded){
       return (
-        <div>Loading...</div>
+        <div className="container">
+          <div className="row">
+            <p>Loading...</p>
+          </div>
+        </div>
       );
     }
     else{
@@ -65,4 +67,4 @@ class APILoad extends React.Component{
 
 };
 
-export default APILoad;
+export default TodoistAPILoad;
